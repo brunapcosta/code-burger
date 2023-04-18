@@ -19,16 +19,13 @@ class UserController {
             admin: Yup.boolean(),
         })
 
-        if (!(await schema.isValid(request.body, {abortEarly: false}))) {
+        try {
+            await schema.validateSync(request.body, { abortEarly: false })
+        } catch (err) {
             return response.status(400).json({ error: err.errors })
         }
-        // try {
-        //     await schema.validateSync(request.body, { abortEarly: false })
-        // } catch (err) {
-        //     return response.status(400).json({ error: err.errors })
-        // }
 
-        // const { name, email, password, admin } = request.body
+        const { name, email, password, admin } = request.body
 
         const userExists = await User.findOne({
             where: { email },
@@ -39,8 +36,6 @@ class UserController {
         }
 
         console.log(userExists)
-
-        const { name, email, password, admin } = request.body
 
         const user = await User.create({
             id: v4(),
