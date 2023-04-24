@@ -1,9 +1,10 @@
 import express from "express"
 import routes from "./routes"
+import { resolve } from 'path'
 
 import "./database"
 
-class App{
+class App {
 
   constructor() {
     this.app = express()
@@ -13,6 +14,9 @@ class App{
 
   milddlewares() {
     this.app.use(express.json())
+    this.app.use(
+      '/product-file',
+      express.static(resolve(__dirname, '..', 'Uploads')))
   }
 
   routes() {
