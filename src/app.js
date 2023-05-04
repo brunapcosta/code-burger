@@ -16,11 +16,17 @@ class App {
     this.app.use(express.json())
     this.app.use(
       '/product-file',
-      express.static(resolve(__dirname, '..', 'Uploads')))
+      express.static(resolve(__dirname, '..', 'Uploads'))
+      ),
+
+    this.app.use(
+      '/category-file',
+      express.static(resolve(__dirname, '..', 'Uploads'))
+      )
   }
 
-  routes() {
-    this.app.use(routes)
-  }
+routes() {
+  this.app.use(routes)
+}
 };
 export default new App().app
