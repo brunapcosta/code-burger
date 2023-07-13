@@ -19,7 +19,7 @@ class SessionController {
 
         const { email, password } = request.body
         const user = await User.findOne({
-            where: { email },
+            where: {email},
         })
 
         if (!user) userEmailOrPasswordIncorrect()
