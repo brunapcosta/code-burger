@@ -19,7 +19,7 @@ class SessionController {
 
         const { email, password } = request.body
         const user = await User.findOne({
-            where: {email},
+            where: { email },
         })
 
         if (!user) userEmailOrPasswordIncorrect()
@@ -28,14 +28,14 @@ class SessionController {
 
         return response.json(
             {
-            id: user.id,
-            email,
-            name: user.name,
-            admin: user.admin,
-            token: jwt.sign({ id: user.id, name: user.name }, authConfig.secret, {
-                expiresIn: authConfig.expiresIn,
-            }),
-        }
+                id: user.id,
+                email: user.email,
+                name: user.name,
+                admin: user.admin,
+                token: jwt.sign({ id: user.id, name: user.name }, authConfig.secret, {
+                    expiresIn: authConfig.expiresIn,
+                }),
+            }
         )
     }
 }
