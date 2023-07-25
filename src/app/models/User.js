@@ -1,5 +1,5 @@
 import Sequelize, { Model } from 'sequelize'
-import bcrypt, { compare } from 'bcrypt'
+import bcrypt from 'bcrypt'
 
 class User extends Model {
     static init(sequelize) {
