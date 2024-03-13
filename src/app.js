@@ -1,9 +1,15 @@
-import express from "express"
-import routes from "./routes"
-import { resolve } from 'path'
-import cors from 'cors'
+// import express from "express"
+// import routes from "./routes"
+// import { resolve } from 'path'
+// import cors from 'cors'
+const express = require ("express");
+const routes = require ("routes");
+const {resolve} = require ("path");
+const cors = require ("cors");
 
-import "./database"
+const database = require ("./database");
+
+// import "./database"
 
 class App {
 
@@ -32,4 +38,7 @@ routes() {
   this.app.use(routes)
 }
 };
-export default new App().app
+
+module.exports = new App().app
+
+// export default new App().app

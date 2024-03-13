@@ -1,14 +1,26 @@
-import { Router } from "express"
-import multer from 'multer'
-import multerConfig from './config/multer'
+// import { Router } from "express"
+// import multer from 'multer'
+// import multerConfig from './config/multer'
 
-import UserController from "./app/controllers/UserController";
-import SessionController from "./app/controllers/SessionController";
-import ProductController from "./app/controllers/ProductController";
-import CategoryController from "./app/controllers/CategoryController";
-import OrderController from "./app/controllers/OrderController";
+// import UserController from "./app/controllers/UserController";
+// import SessionController from "./app/controllers/SessionController";
+// import ProductController from "./app/controllers/ProductController";
+// import CategoryController from "./app/controllers/CategoryController";
+// import OrderController from "./app/controllers/OrderController";
 
-import authMiddleware from './app/middlewares/auth'
+// import authMiddleware from './app/middlewares/auth'
+
+const {Router} = require ("express");
+const multer = require ("multer");
+const multerConfig = require ("./config/multer");
+
+const UserController = require ("./app/controllers/UserController");
+const SessionController = require ("./app/controllers/SessionController");
+const ProductController = require ("./app/controllers/ProductController");
+const CategoryController = require ("./app/controllers/OrderController");
+const OrderController = require ("./app/controllers/OrderController");
+
+const authMiddleware = require ("./app/middlewares/auth");
 
 const upload = multer(multerConfig)
 const routes = new Router()
@@ -31,4 +43,6 @@ routes.post('/orders', OrderController.store)
 routes.put('/orders/:id', OrderController.update)
 routes.get('/orders', OrderController.index)
 
-export default routes;
+module.exports = routes;
+
+// export default routes;

@@ -1,4 +1,7 @@
-import Sequelize, { Model } from 'sequelize'
+// import Sequelize, { Model } from 'sequelize'
+
+const Sequelize = require ("sequelize");
+
 
 
 class Category extends Model {
@@ -22,4 +25,6 @@ class Category extends Model {
     }
 }
 
-export default Category
+module.exports = Category
+
+// export default Category

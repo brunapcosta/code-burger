@@ -1,8 +1,12 @@
-import jwt from 'jsonwebtoken'
-import authConfig from '../../config/auth'
+// import jwt from 'jsonwebtoken'
+// import authConfig from '../../config/auth'
 
+const jwt = require ("jsonwebtoken");
+const authConfig = require ("../../config/auth");
 
-export default (request, response, next) => {
+// export default (request, response, next) 
+
+module.exports = (request, response, next) => {
     const authToken = request.headers.authorization
 
     if (!authToken) {

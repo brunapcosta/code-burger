@@ -1,5 +1,9 @@
-import Sequelize, { Model } from 'sequelize'
-import bcrypt from 'bcrypt'
+// import Sequelize, { Model } from 'sequelize'
+// import bcrypt from 'bcrypt'
+
+const Sequelize = require ("sequelize");
+const bcrypt = require ("bcrypt");
+
 
 class User extends Model {
     static init(sequelize) {
@@ -30,5 +34,7 @@ class User extends Model {
     }
 }
 
-export default User
+module.exports = User
+
+// export default User
 
