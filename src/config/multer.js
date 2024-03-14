@@ -5,9 +5,10 @@
 const multer = require ("multer");
 const { v4 } = require ("uuid");
 const { extname, resolve } = require ("path");
-const multer = require ("multer");
 
-export default{
+// export default
+
+module.exports = {
     storage: multer.diskStorage({
         destination: resolve( __dirname, '..', '..', 'Uploads' ),
         filename: (request, file, callback) => {
