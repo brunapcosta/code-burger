@@ -1,17 +1,19 @@
 // import Sequelize, { Model } from 'sequelize'
 
-const Sequelize = require ("sequelize");
+// const Sequelize = require ("sequelize");
+const { Model, DataTypes } = require ("sequelize");
+
 
 class Product extends Model {
     static init(sequelize) {
         super.init(
             {
-                name: Sequelize.STRING,
-                price: Sequelize.INTEGER,
-                path: Sequelize.STRING,
-                offer: Sequelize.BOOLEAN,
+                name: DataTypes.STRING,
+                price: DataTypes.INTEGER,
+                path: DataTypes.STRING,
+                offer: DataTypes.BOOLEAN,
                 url: {
-                    type: Sequelize.VIRTUAL,
+                    type: DataTypes.VIRTUAL,
                     get() {
                         return `http://localhost:3001/product-file/${this.path}`
                     },

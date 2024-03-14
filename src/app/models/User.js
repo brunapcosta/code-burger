@@ -1,7 +1,8 @@
 // import Sequelize, { Model } from 'sequelize'
 // import bcrypt from 'bcrypt'
 
-const Sequelize = require ("sequelize");
+// const Sequelize = require ("sequelize");
+const { Model, DataTypes } = require ("sequelize");
 const bcrypt = require ("bcrypt");
 
 
@@ -9,11 +10,11 @@ class User extends Model {
     static init(sequelize) {
         super.init(
             {
-                name: Sequelize.STRING,
-                email: Sequelize.STRING,
-                password: Sequelize.VIRTUAL,
-                password_hash: Sequelize.STRING,
-                admin: Sequelize.BOOLEAN,
+                name: DataTypes.STRING,
+                email: DataTypes.STRING,
+                password: DataTypes.VIRTUAL,
+                password_hash: DataTypes.STRING,
+                admin: DataTypes.BOOLEAN,
             },
             {
                 sequelize,

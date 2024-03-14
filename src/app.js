@@ -3,8 +3,8 @@
 // import { resolve } from 'path'
 // import cors from 'cors'
 const express = require ("express");
-const routes = require ("routes");
-const {resolve} = require ("path");
+const routes = require ("./routes");
+const { resolve } = require ("path");
 const cors = require ("cors");
 
 const database = require ("./database");
@@ -39,6 +39,6 @@ routes() {
 }
 };
 
-module.exports = new App().app
+module.exports = { app: new App().app }
 
 // export default new App().app
