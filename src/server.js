@@ -2,4 +2,6 @@
 
 const { app } = require ("./app.js");
 
+app.use(cors())
+
 app.listen(3001);
