@@ -1,18 +1,18 @@
-// import Sequelize from "sequelize"
-// import mongoose from "mongoose"
+import Sequelize from "sequelize"
+import mongoose from "mongoose"
 
-// import ConfigDatabase from "../config/database"
+import ConfigDatabase from "../config/database"
 
-// import User from "../app/models/User"
-// import Product from "../app/models/Product"
-// import Category from "../app/models/Category"
+import User from "../app/models/User"
+import Product from "../app/models/Product"
+import Category from "../app/models/Category"
 
-const Sequelize = require ("sequelize");
-const mongoose = require ("mongoose");
-const ConfigDatabase = require ("../config/database")
-const User = require ("../app/models/User");
-const Product = require ("../app/models/Product");
-const Category = require ("../app/models/Category");
+// const Sequelize = require ("sequelize");
+// const mongoose = require ("mongoose");
+// const ConfigDatabase = require ("../config/database")
+// const User = require ("../app/models/User");
+// const Product = require ("../app/models/Product");
+// const Category = require ("../app/models/Category");
 
 const models = [User, Product, Category]
 
@@ -33,7 +33,6 @@ class Database {
 
     mongo() {
         this.mongoConnection = mongoose.connect(
-            // 'mongodb://mongo:qfLKyZUyCooadPNhzKyzuFRXzFhsDBiT@monorail.proxy.rlwy.net:36656',
             'mongodb://localhost:27017/codeburger',
             {
                 useNewUrlParser: true,
@@ -42,6 +41,6 @@ class Database {
     }
 }
 
-module.exports = new Database()  
+// module.exports = new Database()  
 
-//export default Database
+export default Database

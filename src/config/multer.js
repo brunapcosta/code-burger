@@ -1,14 +1,14 @@
-// import multer from 'multer'
-// import { v4 } from 'uuid'
-// import { extname, resolve } from 'path'
+import multer from 'multer'
+import { v4 } from 'uuid'
+import { extname, resolve } from 'path'
 
-const multer = require ("multer");
-const { v4 } = require ("uuid");
-const { extname, resolve } = require ("path");
+// const multer = require ("multer");
+// const { v4 } = require ("uuid");
+// const { extname, resolve } = require ("path");
 
-// export default
+// module.exports = 
 
-module.exports = {
+export default{
     storage: multer.diskStorage({
         destination: resolve( __dirname, '..', '..', 'Uploads' ),
         filename: (request, file, callback) => {
