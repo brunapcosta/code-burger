@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "type": "commonjs",
   "engines": {
-    "node": "12.1"
+    "node": "20.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
