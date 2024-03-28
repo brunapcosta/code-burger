@@ -4,9 +4,6 @@
   "description": "",
   "main": "src/server.js",
   "type": "commonjs",
-  "engines": {
-    "node": "20.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
