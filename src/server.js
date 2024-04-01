@@ -1,10 +1,10 @@
 import app from "./app";
 
-// const port = process.env.PORT || 3001;
+const PORT = 3001;
+
+app.listen(PORT);
 
 // const { app } = require ("./app.js");
 // const cors = require("cors")
 
 // app.use(cors())
-
-app.listen(3001);
