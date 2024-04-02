@@ -12,7 +12,7 @@ import cors from 'cors'
 import "./database"
 
 const corsOptions = {
-  origin: 'https://code-burger-interface-mauve.vercel.app/login',
+  origin: '*',
   credentials: true,
 }
 
