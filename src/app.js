@@ -20,7 +20,7 @@ class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors)
+    this.app.use(cors())
 
     //   {
     //   origin: 'http://localhost:3000',
