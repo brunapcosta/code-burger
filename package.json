@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "debug": "nodemon --inspect",
-    "start": "node --loader ts-node/esm src/server.js"
+    "debug": "nodemon --inspect"
   },
   "keywords": [],
   "author": "",
