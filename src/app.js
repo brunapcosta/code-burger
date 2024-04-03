@@ -11,16 +11,16 @@ import cors from 'cors'
 
 import "./database"
 
-const corsOptions = {
-  origin: ["https://code-burger-interface-mauve.vercel.app/"],
-  credentials: true,
-}
+// const corsOptions = {
+//   origin: ["https://code-burger-interface-mauve.vercel.app/"],
+//   credentials: true,
+// }
 
 class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors(corsOptions))
+    this.app.use(cors)
 
     //   {
     //   origin: 'http://localhost:3000',
