@@ -45,6 +45,7 @@ class App {
   }
 
 routes() {
+  this.app.options('*', cors())
   this.app.use(routes)
 }
 };
