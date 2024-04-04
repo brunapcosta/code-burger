@@ -20,7 +20,7 @@ class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors())
+    this.app.use(cors(res.header('Access-Control-Allow-Origin', '*')))
     this.app.options('*', cors())
 
     // {
