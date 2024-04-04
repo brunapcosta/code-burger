@@ -20,7 +20,14 @@ class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors())
+    this.app.use(cors(
+      {
+        "origin": "*",
+        "methods": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
+        "preflightContinue": false,
+        "optionsSuccessStatus": 204
+      }
+    ))
 
     //   {
     //   origin: 'http://localhost:3000',
@@ -45,7 +52,6 @@ class App {
   }
 
 routes() {
-  this.app.options('*', cors())
   this.app.use(routes)
 }
 };
