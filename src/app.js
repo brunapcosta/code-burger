@@ -20,18 +20,14 @@ class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors(
-      {
-        "origin": "*",
-        "methods": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
-        "preflightContinue": false,
-        "optionsSuccessStatus": 204
-      }
-    ))
+    this.app.use(cors())
+    this.app.options('*', cors())
 
-    //   {
-    //   origin: 'http://localhost:3000',
-    //   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    // {
+    //   "origin": "*",
+    //   "methods": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
+    //   "preflightContinue": false,
+    //   "optionsSuccessStatus": 204
     // }
 
     this.milddlewares()
