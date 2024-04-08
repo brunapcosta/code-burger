@@ -8,10 +8,10 @@
 
 import express from "express"
 import routes from "./routes.js"
-import { resolve } from 'path'
+import { __dirname, resolve } from 'path'
 import cors from 'cors'
 
-import { Database } from './database/index.js'
+import Database from './database/index.js'
 
 class App {
 

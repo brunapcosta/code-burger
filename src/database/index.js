@@ -43,4 +43,4 @@ class Database {
 
 // module.exports = new Database()  
 
-export default new Database().index
+export default new Database()
