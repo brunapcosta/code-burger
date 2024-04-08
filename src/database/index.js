@@ -8,7 +8,7 @@
 import Sequelize from "sequelize"
 import mongoose from "mongoose"
 
-import ConfigDatabase from "../config/database"
+// import ConfigDatabase from "../config/database"
 
 import User from "../app/models/User"
 import Product from "../app/models/Product"
@@ -43,4 +43,4 @@ class Database {
 
 // module.exports = new Database()  
 
-export default Database
+export default new Database

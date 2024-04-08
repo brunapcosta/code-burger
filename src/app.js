@@ -11,7 +11,8 @@ import routes from "./routes.js"
 import { resolve } from 'path'
 import cors from 'cors'
 
-import'./database/index.js'
+import { Database } from './database/index.js'
+
 class App {
 
   constructor() {
@@ -20,6 +21,9 @@ class App {
 
     this.milddlewares()
     this.routes()
+
+    this.database = new Database();
+    this.database.connect();
   }
 
   milddlewares() {
