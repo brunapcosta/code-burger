@@ -7,7 +7,7 @@
 
 
 import express from "express"
-import routes from "./routes"
+import routes from "./routes.js"
 import { resolve } from 'path'
 import cors from 'cors'
 
@@ -17,7 +17,6 @@ class App {
   constructor() {
     this.app = express()
     this.app.use(cors())
-    this.app.options('*', cors())
 
     this.milddlewares()
     this.routes()
