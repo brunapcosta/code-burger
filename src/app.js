@@ -8,10 +8,17 @@
 
 import express from "express"
 import routes from "./routes.js"
-import { __dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
 import cors from 'cors'
 
 import Database from './database/index.js'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Agora você pode usar __dirname conforme necessário
+
 
 class App {
 
@@ -19,14 +26,12 @@ class App {
     this.app = express()
     this.app.use(cors())
 
-    this.milddlewares()
+    this.middlewares()
     this.routes()
 
-    this.database = new Database();
-    this.database.connect();
   }
 
-  milddlewares() {
+  middlewares() {
     this.app.use(express.json())
     this.app.use(
       '/product-file',
@@ -42,6 +47,16 @@ class App {
 routes() {
   this.app.use(routes)
 }
+
+async connectDatabase() {
+  try {
+    await this.database.connect();
+    console.log('Connected to the database');
+  } catch (error) {
+    console.error('Failed to connect to the database:', error);
+  }
+}
+
 };
 
 // module.exports = { app: new App().app }
