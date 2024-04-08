@@ -11,7 +11,7 @@ import routes from "./routes.js"
 import { resolve } from 'path'
 import cors from 'cors'
 
-import "./database"
+import './database'
 class App {
 
   constructor() {
