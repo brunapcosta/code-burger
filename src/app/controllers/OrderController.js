@@ -5,10 +5,10 @@
 // const User = require ("../models/User");
 
 import * as Yup from 'yup'
-import Product from '../models/Product'
-import Category from '../models/Category'
-import Order from '../Schemas/order'
-import User from '../models/User'
+import Product from '../models/Product.js'
+import Category from '../models/Category.js'
+import Order from '../Schemas/order.js'
+import User from '../models/User.js'
 
 class OrderController {
     async store(request, response) {

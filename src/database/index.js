@@ -10,9 +10,9 @@ import mongoose from "mongoose"
 
 // import ConfigDatabase from "../config/database"
 
-import User from "../app/models/User"
-import Product from "../app/models/Product"
-import Category from "../app/models/Category"
+import User from "../app/models/User.js"
+import Product from "../app/models/Product.js"
+import Category from "../app/models/Category.js"
 
 const models = [User, Product, Category]
 
@@ -43,4 +43,4 @@ class Database {
 
 // module.exports = new Database()  
 
-export default new Database
+export default new Database().index
