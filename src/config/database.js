@@ -1,6 +1,6 @@
 module.exports = {
     dialect: 'postgres',
-    host: 'localhost',
+    host: 'postgresql://postgres:hXhwvDsmeJmhOSVBeUvzExqJtYJetTKL@viaduct.proxy.rlwy.net:34337/railway',
     username: 'postgres',
     password: 'postgres',
     database: 'codeburger',
