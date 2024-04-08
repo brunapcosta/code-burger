@@ -1,7 +1,3 @@
-import express from "express"
-import routes from "./routes"
-import { resolve } from 'path'
-import cors from 'cors'
 // const express = require ("express");
 // const routes = require ("./routes");
 // const { resolve } = require ("path");
@@ -9,26 +5,19 @@ import cors from 'cors'
 
 // const database = require ("./database");
 
+
+import express from "express"
+import routes from "./routes"
+import { resolve } from 'path'
+import cors from 'cors'
+
 import "./database"
-
-// const corsOptions = {
-//   origin: ["https://code-burger-interface-mauve.vercel.app/"],
-//   credentials: true,
-// }
-
 class App {
 
   constructor() {
     this.app = express()
     this.app.use(cors())
     this.app.options('*', cors())
-
-    // {
-    //   "origin": "*",
-    //   "methods": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
-    //   "preflightContinue": false,
-    //   "optionsSuccessStatus": 204
-    // }
 
     this.milddlewares()
     this.routes()

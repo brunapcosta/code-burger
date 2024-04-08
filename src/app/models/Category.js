@@ -1,9 +1,7 @@
-import Sequelize, { Model } from 'sequelize'
-
 // const Sequelize = require ("sequelize");
 // const { Model, DataTypes } = require ("sequelize");
 
-
+import Sequelize, { Model } from 'sequelize'
 class Category extends Model {
     static init(sequelize) {
         super.init(

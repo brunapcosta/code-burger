@@ -1,15 +1,3 @@
-import { Router } from "express"
-import multer from 'multer'
-import multerConfig from './config/multer'
-
-import UserController from "./app/controllers/UserController";
-import SessionController from "./app/controllers/SessionController";
-import ProductController from "./app/controllers/ProductController";
-import CategoryController from "./app/controllers/CategoryController";
-import OrderController from "./app/controllers/OrderController";
-
-import authMiddleware from './app/middlewares/auth'
-
 // const { Router } = require ("express");
 // const multer = require ("multer");
 // const multerConfig = require ("./config/multer");
@@ -21,6 +9,18 @@ import authMiddleware from './app/middlewares/auth'
 // const OrderController = require ("./app/controllers/OrderController");
 
 // const authMiddleware = require ("./app/middlewares/auth");
+
+import { Router } from "express"
+import multer from 'multer'
+import multerConfig from './config/multer'
+
+import UserController from "./app/controllers/UserController";
+import SessionController from "./app/controllers/SessionController";
+import ProductController from "./app/controllers/ProductController";
+import CategoryController from "./app/controllers/CategoryController";
+import OrderController from "./app/controllers/OrderController";
+
+import authMiddleware from './app/middlewares/auth'
 
 const upload = multer(multerConfig);
 const routes = new Router();

@@ -1,12 +1,12 @@
-import * as Yup from 'yup'
-import jwt from 'jsonwebtoken'
-import authConfig from '../../config/auth'
-import User from "../models/User"
-
 // const Yup = require ("yup");
 // const jwt = require ("jsonwebtoken");
 // const authConfig = require ("../../config/auth");
 // const User = require ("../models/User");
+
+import * as Yup from 'yup'
+import jwt from 'jsonwebtoken'
+import authConfig from '../../config/auth'
+import User from "../models/User"
 class SessionController {
     async store(request, response) {
         const schema = Yup.object().shape({

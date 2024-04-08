@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
-
 // const mongoose = require ("mongoose");
 
+import mongoose from "mongoose";
 
 const OrderSchema = new mongoose.Schema({
     user: {

@@ -1,11 +1,9 @@
-import Sequelize, { Model } from 'sequelize'
-import bcrypt from 'bcrypt'
-
 // const Sequelize = require ("sequelize");
 // const { Model, DataTypes } = require ("sequelize");
 // const bcrypt = require ("bcrypt");
 
-
+import Sequelize, { Model } from 'sequelize'
+import bcrypt from 'bcrypt'
 class User extends Model {
     static init(sequelize) {
         super.init(
