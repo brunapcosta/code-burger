@@ -12,12 +12,10 @@ import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
 import cors from 'cors'
 
-import Database from './database/index.js'
+import "./database"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// Agora você pode usar __dirname conforme necessário
 
 
 class App {
@@ -48,17 +46,17 @@ routes() {
   this.app.use(routes)
 }
 
-async connectDatabase() {
-  try {
-    await this.database.connect();
-    console.log('Connected to the database');
-  } catch (error) {
-    console.error('Failed to connect to the database:', error);
-  }
-}
+// async Database() {
+//   try {
+//     await this.database.connect();
+//     console.log('Connected to the database');
+//   } catch (error) {
+//     console.error('Failed to connect to the database:', error);
+//   }
+// }
 
-};
+}
 
 // module.exports = { app: new App().app }
 
-export default new App().app
+export default new App().app;
