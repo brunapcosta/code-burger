@@ -5,10 +5,11 @@
 // const Product = require ("../app/models/Product");
 // const Category = require ("../app/models/Category");
 
+// import ConfigDatabase from "../config/database"
+
+
 import Sequelize from "sequelize"
 import mongoose from "mongoose"
-
-// import ConfigDatabase from "../config/database"
 
 import User from "../app/models/User.js"
 import Product from "../app/models/Product.js"
@@ -19,16 +20,25 @@ const models = [User, Product, Category]
 class Database {
     constructor() {
         this.init()
+        this.associate()
         this.mongo()
     }
 
     init() {
         this.connection = new Sequelize('postgresql://postgres:hXhwvDsmeJmhOSVBeUvzExqJtYJetTKL@viaduct.proxy.rlwy.net:34337/railway')
-        models
-            .map((model) => model.init(this.connection))
-            .map(
-                (model) => model.associate && model.associate(this.connection.models)
-            )
+        models.forEach((model) => model.init(this.connection))
+
+            // .map((model) => model.init(this.connection))
+            // .map(
+            //     (model) => model.associate && model.associate(this.connection.models)
+    }
+
+    associate() {
+        models.forEach((model) => {
+            if (model.associate) {
+                model.associate(this.connection.models)
+            }
+        })
     }
 
     mongo() {
@@ -41,6 +51,9 @@ class Database {
     }
 }
 
+const database = new Database();
+export default database;
+
 // module.exports = new Database()  
 
-export default new Database
+// export default new Database()
