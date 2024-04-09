@@ -6,13 +6,13 @@
     delete  => apagar.
 */
 
-// const { v4 } = require ("uuid");
-// const User = require ("../models/User");
-// const Yup = require ("yup");
+const { v4 } = require ("uuid");
+const User = require ("../models/User");
+const Yup = require ("yup");
 
-import { v4 } from "uuid"
-import User from "../models/User.js"
-import * as Yup from 'yup'
+// import { v4 } from "uuid"
+// import User from "../models/User.js"
+// import * as Yup from 'yup'
 class UserController {
     async store(request, response) {
 
@@ -53,6 +53,6 @@ class UserController {
     }
 }
 
-// module.exports = new UserController()
+module.exports = new UserController()
 
-export default new UserController()
+// export default new UserController()

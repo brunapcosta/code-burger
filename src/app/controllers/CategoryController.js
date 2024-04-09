@@ -1,10 +1,10 @@
-// const Yup = require ("yup");
-// const Category = require ("../models/Category");
-// const User = require ("../models/User");
+const Yup = require ("yup");
+const Category = require ("../models/Category");
+const User = require ("../models/User");
 
-import * as Yup from 'yup'
-import Category from '../models/Category.js'
-import User from '../models/User.js'
+// import * as Yup from 'yup'
+// import Category from '../models/Category.js'
+// import User from '../models/User.js'
 class CategoryController {
     async store(request, response) {
         try {
@@ -96,6 +96,6 @@ class CategoryController {
     }
 }
 
-// module.exports = new CategoryController()
+module.exports = new CategoryController()
 
-export default new CategoryController()
+// export default new CategoryController()

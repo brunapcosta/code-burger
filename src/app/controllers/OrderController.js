@@ -1,14 +1,14 @@
-// const Yup = require ("yup");
-// const Product = require ("../models/Product");
-// const Category = require ("../models/Category");
-// const Order = require ("../Schemas/order");
-// const User = require ("../models/User");
+const Yup = require ("yup");
+const Product = require ("../models/Product");
+const Category = require ("../models/Category");
+const Order = require ("../Schemas/order");
+const User = require ("../models/User");
 
-import * as Yup from 'yup'
-import Product from '../models/Product.js'
-import Category from '../models/Category.js'
-import Order from '../Schemas/order.js'
-import User from '../models/User.js'
+// import * as Yup from 'yup'
+// import Product from '../models/Product.js'
+// import Category from '../models/Category.js'
+// import Order from '../Schemas/order.js'
+// import User from '../models/User.js'
 
 class OrderController {
     async store(request, response) {
@@ -111,6 +111,6 @@ class OrderController {
         return response.json({ message: 'Status updated successfully' })
     }
 }
-// module.exports = new OrderController()
+module.exports = new OrderController()
 
-export default new OrderController()
+// export default new OrderController()

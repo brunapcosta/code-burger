@@ -1,19 +1,17 @@
-// const Sequelize = require ("sequelize");
-// const mongoose = require ("mongoose");
+const Sequelize = require ("sequelize");
+const mongoose = require ("mongoose");
 // const ConfigDatabase = require ("../config/database")
-// const User = require ("../app/models/User");
-// const Product = require ("../app/models/Product");
-// const Category = require ("../app/models/Category");
+const User = require ("../app/models/User");
+const Product = require ("../app/models/Product");
+const Category = require ("../app/models/Category");
 
 // import ConfigDatabase from "../config/database"
+// import Sequelize from "sequelize"
+// import mongoose from "mongoose"
 
-
-import Sequelize from "sequelize"
-import mongoose from "mongoose"
-
-import User from "../app/models/User.js"
-import Product from "../app/models/Product.js"
-import Category from "../app/models/Category.js"
+// import User from "../app/models/User.js"
+// import Product from "../app/models/Product.js"
+// import Category from "../app/models/Category.js"
 
 const models = [User, Product, Category]
 
@@ -51,9 +49,9 @@ class Database {
     }
 }
 
-const database = new Database();
-export default database;
+// const database = new Database();
+// export default database;
 
-// module.exports = new Database()  
+module.exports = new Database()  
 
 // export default new Database()

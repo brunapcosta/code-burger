@@ -1,21 +1,21 @@
-// const express = require ("express");
-// const routes = require ("./routes");
-// const { resolve } = require ("path");
-// const cors = require ("cors");
+const express = require ("express");
+const routes = require ("./routes");
+const { resolve } = require ("path");
+const cors = require ("cors");
 
-// const database = require ("./database");
+const database = require ("./database");
 
 
-import express from "express"
-import routes from "./routes.js"
-import { fileURLToPath } from 'url'
-import { dirname, resolve } from 'path'
-import cors from 'cors'
+// import express from "express"
+// import routes from "./routes.js"
+// import { fileURLToPath } from 'url'
+// import { dirname, resolve } from 'path'
+// import cors from 'cors'
 
-import "./database/index.js"
+// import "./database/index.js"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
 
 class App {
@@ -57,6 +57,6 @@ routes() {
 
 }
 
-// module.exports = { app: new App().app }
+module.exports =  new App().app;
 
-export default new App().app;
+// export default new App().app;

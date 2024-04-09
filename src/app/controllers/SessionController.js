@@ -1,12 +1,12 @@
-// const Yup = require ("yup");
-// const jwt = require ("jsonwebtoken");
-// const authConfig = require ("../../config/auth");
-// const User = require ("../models/User");
+const Yup = require ("yup");
+const jwt = require ("jsonwebtoken");
+const authConfig = require ("../../config/auth");
+const User = require ("../models/User");
 
-import * as Yup from 'yup'
-import jwt from 'jsonwebtoken'
-import authConfig from '../../config/auth.js'
-import User from "../models/User.js"
+// import * as Yup from 'yup'
+// import jwt from 'jsonwebtoken'
+// import authConfig from '../../config/auth.js'
+// import User from "../models/User.js"
 class SessionController {
     async store(request, response) {
         const schema = Yup.object().shape({
@@ -45,6 +45,6 @@ class SessionController {
     }
 }
 
-// module.exports = new SessionController()
+module.exports = new SessionController()
 
-export default new SessionController()
+// export default new SessionController()

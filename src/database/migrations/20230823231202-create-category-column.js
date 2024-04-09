@@ -1,6 +1,7 @@
 'use strict';
 
-export default {
+
+module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.addColumn('Products', 'category_id', {
       type: Sequelize.INTEGER,

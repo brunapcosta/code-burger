@@ -1,6 +1,6 @@
 'use strict';
 
-export default {
+module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.addColumn('Products', 'offer', {
        type: Sequelize.BOOLEAN, 
