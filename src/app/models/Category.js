@@ -11,7 +11,7 @@ class Category extends Model {
                 url: {
                     type: DataTypes.VIRTUAL,
                     get() {
-                        return `http://localhost:3001/category-file/${this.path}`
+                        return `https://burger-good-ea18.up.railway.app/category-file/${this.path}`
                     },
                 },
             },
