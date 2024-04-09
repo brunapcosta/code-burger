@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     dialect: 'postgres',
     url: 'postgresql://postgres:hXhwvDsmeJmhOSVBeUvzExqJtYJetTKL@viaduct.proxy.rlwy.net:34337/railway',
     // host: 'localhost',
