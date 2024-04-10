@@ -14,7 +14,7 @@ const routes = require ("./routes");
 const { resolve } = require ("path");
 const cors = require ("cors");
 
-const database = require ("./database");
+require ("./database");
 
 const corsOptions = {
   origin: 'https://burger-good.vercel.app',
