@@ -16,16 +16,16 @@ const cors = require("cors");
 
 require("./database");
 
-const corsOptions = {
-  origin: 'https://burger-good.vercel.app',
-  credentials: true,
-}
+// const corsOptions = {
+//   origin: 'https://burger-good.vercel.app',
+//   credentials: true,
+// }
 
 class App {
 
   constructor() {
     this.app = express()
-    this.app.use(cors(corsOptions))
+    this.app.use(cors())
     this.middlewares()
     this.routes()
 
