@@ -17,7 +17,7 @@ const cors = require ("cors");
 require ("./database");
 
 const corsOptions = {
-  origin: 'https://burger-good.vercel.app',
+  origin: 'https://burger-good.vercel.app/',
   credentials: true,
 }
 
