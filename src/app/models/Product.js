@@ -1,5 +1,5 @@
 // const Sequelize = require ("sequelize");
-const { Model, DataTypes } = require ("sequelize");
+const { Model, DataTypes } = require("sequelize");
 
 // import Sequelize, { Model } from 'sequelize'
 class Product extends Model {

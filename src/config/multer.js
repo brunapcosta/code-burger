@@ -1,7 +1,7 @@
 
-const multer = require ("multer");
-const { v4 } = require ("uuid");
-const { extname, resolve } = require ("path");
+const multer = require("multer");
+const { v4 } = require("uuid");
+const { extname, resolve } = require("path");
 
 // import multer from 'multer'
 // import { v4 } from 'uuid'
