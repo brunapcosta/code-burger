@@ -1,6 +1,6 @@
-const Yup = require ("yup");
-const Category = require ("../models/Category");
-const User = require ("../models/User");
+const Yup = require("yup");
+const Category = require("../models/Category");
+const User = require("../models/User");
 
 // import * as Yup from 'yup'
 // import Category from '../models/Category.js'
