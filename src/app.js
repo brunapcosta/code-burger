@@ -9,10 +9,10 @@
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
 
-const express = require ("express");
-const routes = require ("./routes");
-const { resolve } = require ("path");
-const cors = require ("cors");
+const express = require("express");
+const routes = require("./routes");
+const { resolve } = require("path");
+const cors = require("cors");
 
 require("./database");
 
@@ -26,7 +26,6 @@ class App {
   constructor() {
     this.app = express()
     this.app.use(cors(corsOptions))
-
     this.middlewares()
     this.routes()
 
