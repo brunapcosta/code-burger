@@ -8,11 +8,11 @@
 
 // const ConfigDatabase = require ("../config/database")
 
-const Sequelize = require ("sequelize");
-const mongoose = require ("mongoose");
-const User = require ("../app/models/User");
-const Product = require ("../app/models/Product");
-const Category = require ("../app/models/Category");
+const Sequelize = require("sequelize");
+const mongoose = require("mongoose");
+const User = require("../app/models/User");
+const Product = require("../app/models/Product");
+const Category = require("../app/models/Category");
 
 const models = [User, Product, Category]
 
