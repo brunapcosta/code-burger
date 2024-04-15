@@ -1,5 +1,5 @@
 // import app from "./app.js"
-const app = require("./app")
+const app = require("./app.js")
 
 const port = process.env.PORT || 3001
 
