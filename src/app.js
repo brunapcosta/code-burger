@@ -25,7 +25,9 @@ class App {
 
   constructor() {
     this.app = express()
+
     this.app.use(cors(corsOptions))
+
     this.middlewares()
     this.routes()
 
@@ -36,7 +38,7 @@ class App {
     this.app.use(
       '/product-file',
       express.static(resolve(__dirname, '..', 'Uploads'))
-      ),
+      )
 
     this.app.use(
       '/category-file',

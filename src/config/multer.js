@@ -16,6 +16,6 @@ module.exports = {
         destination: resolve( __dirname, '..', '..', 'Uploads' ),
         filename: (request, file, callback) => {
           return callback(null, v4() + extname(file.originalname))
-        }
-    })
+        },
+    }),
 }

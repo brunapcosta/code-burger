@@ -25,13 +25,14 @@ class CategoryController {
             }
 
             const { name } = request.body
+            console.log(request.file)
 
             const { filename: path } = request.file
 
 
             const categoryExists = await Category.findOne({
                 where: {
-                    name
+                    name,
                 },
             })
 
@@ -57,7 +58,7 @@ class CategoryController {
     async update(request, response) {
         try {
             const schema = Yup.object().shape({
-                name: Yup.string()
+                name: Yup.string(),
             })
 
             try {
