@@ -47,18 +47,9 @@ class App {
         )
   }
 
-routes() {
-  this.app.use(routes)
+  routes() {
+      this.app.use(routes)
 }
-
-// async Database() {
-//   try {
-//     await this.database.connect();
-//     console.log('Connected to the database');
-//   } catch (error) {
-//     console.error('Failed to connect to the database:', error);
-//   }
-// }
 
 }
 
