@@ -1,13 +1,3 @@
-// import ConfigDatabase from "../config/database"
-// import Sequelize from "sequelize"
-// import mongoose from "mongoose"
-
-// import User from "../app/models/User.js"
-// import Product from "../app/models/Product.js"
-// import Category from "../app/models/Category.js"
-
-// const ConfigDatabase = require ("../config/database")
-
 const Sequelize = require("sequelize");
 const mongoose = require("mongoose");
 const User = require("../app/models/User");
@@ -31,18 +21,9 @@ class Database {
             .map(
                 (model) => model.associate && model.associate(this.connection.models)
             )
-        // models.forEach((model) => model.init(this.connection))
 
             
     }
-
-    // associate() {
-    //     models.forEach((model) => {
-    //         if (model.associate) {
-    //             model.associate(this.connection.models)
-    //         }
-    //     })
-    // }
 
     mongo() {
         this.mongoConnection = mongoose.connect(
@@ -54,9 +35,4 @@ class Database {
     }
 }
 
-// const database = new Database();
-// export default database;
-
 module.exports = new Database()  
-
-// export default new Database()

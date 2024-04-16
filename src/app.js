@@ -1,14 +1,3 @@
-// import express from "express"
-// import routes from "./routes.js"
-// import { fileURLToPath } from 'url'
-// import { dirname, resolve } from 'path'
-// import cors from 'cors'
-
-// import "./database/index.js"
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
-
 const express = require("express");
 const routes = require("./routes");
 const { resolve } = require("path");
@@ -54,5 +43,3 @@ class App {
 }
 
 module.exports =  new App().app;
-
-// export default new App().app;
