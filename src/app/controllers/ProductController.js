@@ -3,10 +3,6 @@ const Product = require ("../models/Product");
 const Category = require ("../models/Category");
 const User = require ("../models/User");
 
-// import * as Yup from 'yup'
-// import Product from '../models/Product.js'
-// import Category from '../models/Category.js'
-// import User from '../models/User.js'
 class ProductController {
     async store(request, response) {
         const schema = Yup.object().shape({
